@@ -51,24 +51,5 @@ Une passerelle API centralise les interactions entre les utilisateurs et les mic
 - **Modularité** : Architecture en microservices facilitant la maintenance et l'extension.
 - **Flexibilité** : Extensible pour intégrer d'autres services IA ou fonctionnalités futures.
 
-## Structure du projet
+## Architecture du projet
 
-### Microservice de gestion des utilisateurs
-
-- Responsable de l’enregistrement et de la gestion des comptes utilisateurs.
-
-### Microservice de génération de code
-
-- Responsable de la production de code automatisé basé sur des spécifications.
-
-### Microservice de correction de code
-
-- Responsable de l’amélioration des fragments de code soumis par les développeurs.
-
-### Service de découverte (Eureka)
-
-- Permet la découverte dynamique des microservices.
-
-### Passerelle API (Zuul)
-
-- Centralise les appels aux microservices et gère les préoccupations transversales.
