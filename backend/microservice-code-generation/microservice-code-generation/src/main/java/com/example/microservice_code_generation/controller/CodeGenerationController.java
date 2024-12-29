@@ -1,14 +1,15 @@
 package com.example.microservice_code_generation.controller;
 
-
+import okhttp3.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/code-generation")
-
 class CodeGenerationController {
-    private static final String OPENAI_API_KEY = "your-openai-api-key";
-    private static final String OPENAI_API_URL = "https://api.openai.com/v1/completions";
+    private static final String GEMINI_API_KEY = "AIzaSyBUN2-UViJJfmCLbCsKma5vCOyxQDfaySg";
+    private static final String GEMINI_API_URL = "https://api.gemini.com/v1/generate";
 
     @PostMapping
     public String generateCode(@RequestBody String specifications) throws IOException {
@@ -16,7 +17,7 @@ class CodeGenerationController {
 
         String jsonRequest = """
             {
-                "model": "text-davinci-003",
+                "model": "your-model-name",
                 "prompt": "Generate code for: """ + specifications + """",
                 "max_tokens": 100
             }
@@ -28,8 +29,8 @@ class CodeGenerationController {
         );
 
         Request request = new Request.Builder()
-                .url(OPENAI_API_URL)
-                .addHeader("Authorization", "Bearer " + OPENAI_API_KEY)
+                .url(GEMINI_API_URL)
+                .addHeader("Authorization", "Bearer " + GEMINI_API_KEY)
                 .post(body)
                 .build();
 
@@ -37,7 +38,7 @@ class CodeGenerationController {
             if (response.isSuccessful()) {
                 return response.body().string();
             } else {
-                return "Erreur lors de l'appel à OpenAI : " + response.code();
+                return "Error during the call to Gemini: " + response.code();
             }
         }
     }

@@ -2,6 +2,7 @@ package com.example.microservice_code_correction;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 @SpringBootApplication
 public class CodeCorrectionServiceApplication {
@@ -13,8 +14,11 @@ public class CodeCorrectionServiceApplication {
 @RestController
 @RequestMapping("/code-correction")
 class CodeCorrectionController {
-	private static final String OPENAI_API_KEY = "your-openai-api-key";
-	private static final String OPENAI_API_URL = "https://api.openai.com/v1/completions";
+	
+
+
+	private static final String enAI = "AIzaSyBUN2-UViJJfmCLbCsKma5vCOyxQDfaySg";
+	private static final String GEMINI_API_URL = "https://api.gemini.com/v1/completions";
 
 	@PostMapping
 	public String correctCode(@RequestBody String code) throws IOException {
@@ -34,8 +38,8 @@ class CodeCorrectionController {
 		);
 
 		Request request = new Request.Builder()
-				.url(OPENAI_API_URL)
-				.addHeader("Authorization", "Bearer " + OPENAI_API_KEY)
+				.url(Gemini_API_URL)
+				.addHeader("Authorization", "Bearer " + enAI)
 				.post(body)
 				.build();
 
@@ -43,7 +47,7 @@ class CodeCorrectionController {
 			if (response.isSuccessful()) {
 				return response.body().string();
 			} else {
-				return "Erreur lors de l'appel à OpenAI : " + response.code();
+				return "Erreur lors de l'appel à Gemini : " + response.code();
 			}
 		}
 	}
