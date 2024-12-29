@@ -1,0 +1,102 @@
+.github-visualization {
+    padding: 20px;
+    color: white;
+}
+
+.github-visualization h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.stats-overview {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 600px;
+}
+
+.stat-card h3 {
+    margin-bottom: 15px;
+    color: #9c27b0;
+}
+
+.stat-card ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-card li {
+    background: rgba(156, 39, 176, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.chart-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    backdrop-filter: blur(10px);
+}
+
+.chart-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #9c27b0;
+    font-size: 16px;
+}
+
+.github-viz-loading {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.github-viz-error {
+    text-align: center;
+    padding: 20px;
+    color: #ff4444;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    .stat-card ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .github-visualization {
+        padding: 10px;
+    }
+    .chart-box {
+        height: 250px;
+    }
+}

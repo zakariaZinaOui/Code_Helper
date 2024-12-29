@@ -1,0 +1,73 @@
+.visualization-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.visualization-container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: transparent;
+    border: none;
+    color: #86c5d8;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background: rgba(134, 197, 216, 0.1);
+}
+
+.charts-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.chart-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .visualization-page {
+        padding: 1rem;
+    }
+    .visualization-container {
+        padding: 1rem;
+    }
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .chart-wrapper {
+        height: 300px;
+    }
+}

@@ -2,28 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing:  border-box;
-    scroll-behavior: smooth;
+/* Styles de base */
+
+@layer base {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(135deg, #00008B 0%, #4169E1 100%);
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: white;
+    }
+    * {
+        box-sizing: border-box;
+    }
 }
 
-.gradient-01{
-    position: absolute;
-    width: 200px;
-    height: 238px;
-    top:0;
-    background-color: darkolivegreen;
-    filter: blur(175px);
+
+/* Composants personnalisés */
+
+@layer components {
+    .navbar {
+        @apply fixed top-0 left-0 w-full z-50 px-6 py-4;
+        background: rgba(0, 0, 139, 0.7);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .gradient-01 {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: -100px;
+        top: -100px;
+        background: #00008B;
+        filter: blur(150px);
+        opacity: 0.6;
+    }
+    .gradient-02 {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        right: -100px;
+        bottom: -100px;
+        background: #4169E1;
+        filter: blur(150px);
+        opacity: 0.6;
+    }
+    .chat-container {
+        @apply flex-1 w-full h-full overflow-hidden relative mt-16;
+        background: rgba(0, 0, 139, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .chat-messages {
+        @apply h-full overflow-y-auto py-8 px-4;
+    }
+    .message {
+        @apply mb-4 p-4 rounded-xl;
+        background: rgba(65, 105, 225, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    .message:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+    }
+    .user-message {
+        background: rgba(0, 0, 139, 0.3);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+    .assistant-message {
+        background: rgba(65, 105, 225, 0.2);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    .input-container {
+        @apply fixed bottom-0 left-0 w-full p-4;
+        background: rgba(0, 0, 139, 0.7);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .chat-input {
+        @apply w-full p-4 rounded-xl text-white;
+        background: rgba(65, 105, 225, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    .chat-input:focus {
+        @apply outline-none;
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    }
+    .password-container {
+        @apply relative w-full;
+    }
+    .password-input {
+        @apply w-full p-4 rounded-xl text-white pr-12;
+        background: rgba(65, 105, 225, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    .password-input:focus {
+        @apply outline-none;
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    }
+    .password-toggle {
+        @apply absolute right-3 top-1/2 transform -translate-y-1/2 p-2 rounded-full text-white/70;
+    }
+    .password-toggle:hover {
+        @apply bg-white/10 text-white;
+    }
+    .btn {
+        @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+        background: rgba(65, 105, 225, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .btn:hover {
+        background: rgba(65, 105, 225, 0.4);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-1px);
+    }
 }
 
-.gradient-02{
-    position: absolute;
-    width: 200px;
-    height: 238px;
-    top: -6rem;
-    right: 0px;
-    background: #3a3ca4;
-    filter: blur(190px);
+
+/* Scrollbar personnalisée */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(65, 105, 225, 0.4);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(65, 105, 225, 0.5);
 }

@@ -1,0 +1,204 @@
+.about-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.about-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+}
+
+.features-section {
+    margin-top: 1rem;
+}
+
+.features-title {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+    background: rgba(156, 39, 176, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: #9c27b0;
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.feature-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+    font-size: 0.85rem;
+}
+
+.team-section {
+    margin-top: 4rem;
+}
+
+.team-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+    background: rgba(156, 39, 176, 0.2);
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #9c27b0;
+}
+
+.member-name {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.member-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #9c27b0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    .about-title {
+        font-size: 1.3rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    .feature-card {
+        padding: 0.8rem;
+    }
+}
+
+.contact-button {
+    background: #9c27b0;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-button:hover {
+    background: #7b1fa2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+}
+
+.contact-section {
+    margin-top: 1rem;
+}
