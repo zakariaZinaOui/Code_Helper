@@ -5,6 +5,9 @@ CodeHelper AI(1.0) est une plateforme innovante créée pour accompagner les dé
 
 
 ![codehelper](https://github.com/user-attachments/assets/6281f67d-8f0f-424d-8748-7a1b883b10aa)
+![codehelper](https://github.com/user-attachments/assets/b297ca5d-7c4d-4c7e-9bd3-ca192a540963)
+![AnalyseGit](https://github.com/user-attachments/assets/99883b6e-0e27-4144-b989-2499b26c05a8)
+
 
 
 ## Fonctionnalités principales  
