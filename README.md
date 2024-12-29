@@ -1,31 +1,68 @@
 # CodeHelper 1.0
 
-CodeHelper 1.0 est une solution innovante conçue pour optimiser et simplifier les flux de travail des développeurs en automatisant des tâches courantes grâce à l'intelligence artificielle et une architecture de microservices robuste.
+CodeHelper AI(1.0) est une plateforme innovante créée pour accompagner les développeurs dans leurs défis quotidiens de programmation et pour simplifier leurs flux de travail. Que vous soyez débutant ou expert, notre solution repose sur une intelligence artificielle puissante , une architecture de microservices robust et un support multilingue, vous permettant de travailler plus efficacement et de résoudre vos problèmes de code rapidement.
 
-## Fonctionnalités principales
 
-### 1. Génération de code automatisée
 
-Grâce à une intégration avec l'API d'OpenAI, CodeHelper 1.0 peut générer du code source en fonction des spécifications fournies par les développeurs. Cela permet de gagner du temps lors du prototypage et du développement initial.
+![codehelper](https://github.com/user-attachments/assets/6281f67d-8f0f-424d-8748-7a1b883b10aa)
 
-### 2. Correction et amélioration de code
 
-Les développeurs peuvent soumettre des fragments de code pour correction ou amélioration. Le microservice dédié utilise l'IA pour fournir des suggestions détaillées et des corrections basées sur les meilleures pratiques.
+## Fonctionnalités principales  
 
-### 3. Service de découverte (Eureka)
+### 1. Génération de code automatisée  
+CodeHelper AI (1.0) intègre l'API Gemini pour générer du code source en fonction des spécifications fournies par les développeurs.  
+- **Avantage** : Cette fonctionnalité accélère le prototypage et facilite les phases initiales de développement.  
 
-Un service de découverte centralisé permet à tous les microservices de communiquer efficacement entre eux et de s'adapter dynamiquement aux modifications dans l'infrastructure.
+### 2. Correction et amélioration de code  
+Les développeurs peuvent soumettre des fragments de code à analyser.  
+- **Fonctionnalité** : Le microservice dédié utilise l'intelligence artificielle pour proposer des corrections et des améliorations alignées sur les meilleures pratiques.  
+- **Bénéfice** : Optimisation de la lisibilité et de la performance du code.  
 
-### 4. Passerelle API
+### 3. Analyse de dépôt GitHub et propositions d'améliorations  
+Connectez votre dépôt GitHub pour une analyse complète de vos projets.  
+- **Points forts identifiés** : Bonnes pratiques appliquées et code optimisé.  
+- **Points faibles détectés** : Complexité cyclomatique élevée, duplication de code, ou documentation insuffisante.  
+- **Propositions d'amélioration** :  
+  - Restructuration du code.  
+  - Recommandations sur les tests unitaires.  
+  - Meilleures pratiques pour la sécurité ,la documentation et la performance.  
+- **Visualisation et analyse détaillée du projet GitHub** Pour obtenir une vue détaillée de votre projet:
+    - Distribution des langages: Un graphique circulaire montrant le pourcentage de chaque langage utilisé dans le dépôt.
+    - Nombre de commits : Un graphique de ligne montrant l'évolution du nombre de commits au fil du temps, ce qui peut indiquer l'activité de développement.
+- Branches ouvertes : Une liste  montrant le nombre de branches ouvertes par rapport aux branches fusionnées, ce qui peut aider à évaluer la gestion des versions.
 
-Une passerelle API centralise les interactions entre les utilisateurs et les microservices, simplifiant l'authentification, la gestion des erreurs et les opérations d'acheminement.
+### 4. Service de découverte dynamique (Eureka)  
+Un service de découverte centralisé permet une communication fluide entre tous les microservices.  
+- **Avantage** : Adaptation dynamique aux modifications dans l'infrastructure, garantissant robustesse et flexibilité.  
 
-## Architecture
+### 5. Passerelle API centralisée  
+La passerelle API simplifie et sécurise les interactions entre les utilisateurs et les microservices.  
+- **Fonctionnalités principales** :  
+  - Authentification.  
+  - Gestion des erreurs.  
+  - Acheminement des requêtes.
+
+
+## Avantages pour les développeurs
+
+- **Gain de temps** : Automatisation des tâches répétitives comme la génération de code ou les corrections.
+- **Qualité du code** : Suggestions et corrections alignées sur les standards modernes.
+- **Modularité** : Architecture en microservices facilitant la maintenance et l'extension.
+- **Flexibilité** : Extensible pour intégrer d'autres services IA ou fonctionnalités futures.
+
+
+
+## Architecture du project
+![WhatsApp Image 2024-12-28 at 23 14 04_c16fb429](https://github.com/user-attachments/assets/37a5091c-ab26-45d9-86da-5e3bc2b8f221)
+
 
 ### Backend
 
 - **Technologie principale** : Spring Boot pour une architecture modulaire et évolutive.
 - **Base de données** : MySQL pour chaque microservice afin d'assurer la persistance des données.
+
+### Frontend
+- **React** : Utilisé pour construire une interface utilisateur dynamique et réactive. React permet de créer des composants réutilisables et de gérer l'état de l'application efficacement.
 
 ### Microservices indépendants
 
@@ -35,21 +72,28 @@ Une passerelle API centralise les interactions entre les utilisateurs et les mic
 - **Service de découverte (Eureka)** : Enregistrement et découverte dynamique des microservices.
 - **API Gateway (Zuul)** : Point d'entrée unique pour centraliser les appels aux microservices.
 
-### Intégration avec OpenAI
+### Intégration avec l'API Gemini
+- **Utilisation de l'API Gemini** dans les microservices pour la génération et la correction de code.
+- **Gestion des appels** :Utilisation de Feign Client pour faciliter la communication avec Gemini via HTTP.
 
-- **Utilisation de l'API d'OpenAI** dans les microservices de génération et correction de code.
-- **Gestion des appels** via la bibliothèque OkHttp pour assurer une communication fluide.
+## Video Demonstration
 
-### Gestion des appels asynchrones
 
-- Utilisation de OkHttp ou d'autres bibliothèques HTTP pour des performances optimales.
 
-## Avantages pour les développeurs
+https://github.com/user-attachments/assets/9ce4e936-2cc5-4f4c-a5d5-2d9905cfdddd
 
-- **Gain de temps** : Automatisation des tâches répétitives comme la génération de code ou les corrections.
-- **Qualité du code** : Suggestions et corrections alignées sur les standards modernes.
-- **Modularité** : Architecture en microservices facilitant la maintenance et l'extension.
-- **Flexibilité** : Extensible pour intégrer d'autres services IA ou fonctionnalités futures.
 
-## Architecture du projet
+
+## Contributeurs
+
+Ce projet a été développé avec la contribution de :
+
+- **Salma Daigham**
+- **Imane Tahri**
+- **Zakaria Zinaoui**
+- **Abdelghani Senhaji**
+- **Nabil Hamdi**
+- **Mohamed LACHGAR** (ResearchGate)
+
+
 
