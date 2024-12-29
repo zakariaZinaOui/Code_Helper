@@ -56,8 +56,8 @@ La passerelle API simplifie et sécurise les interactions entre les utilisateurs
 
 
 ## Architecture du project
-![WhatsApp Image 2024-12-28 at 23 14 04_c16fb429](https://github.com/user-attachments/assets/37a5091c-ab26-45d9-86da-5e3bc2b8f221)
 
+![architecture Ace](https://github.com/user-attachments/assets/0a51c9f2-7c52-4dc9-8db5-32d00f414341)
 
 ### Backend
 
@@ -75,9 +75,15 @@ La passerelle API simplifie et sécurise les interactions entre les utilisateurs
 - **Service de découverte (Eureka)** : Enregistrement et découverte dynamique des microservices.
 - **API Gateway (Zuul)** : Point d'entrée unique pour centraliser les appels aux microservices.
 
-### Intégration avec l'API Gemini
-- **Utilisation de l'API Gemini** dans les microservices pour la génération et la correction de code.
-- **Gestion des appels** :Utilisation de Feign Client pour faciliter la communication avec Gemini via HTTP.
+
+### Intégration avec les API externes :
+
+- **API Gemini**:
+Les microservices utilisent l'API Gemini pour la génération et la correction de code.
+Feign Client : Facilitant la communication avec Gemini via des appels HTTP.
+- **API GitHub** :
+Intégrée pour accéder aux dépôts de code, récupérer les fichiers nécessaires, et gérer les interactions liées au versionnement.
+Utilisée pour télécharger, lire ou contribuer aux projets directement depuis les microservices.
 
 ## Video Demonstration
 
