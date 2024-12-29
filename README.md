@@ -87,13 +87,12 @@ https://github.com/user-attachments/assets/9ce4e936-2cc5-4f4c-a5d5-2d9905cfdddd
 ## Contributeurs
 
 Ce projet a été développé avec la contribution de :
-
-- **Salma Daigham**
-- **Imane Tahri**
-- **Zakaria Zinaoui**
-- **Abdelghani Senhaji**
-- **Nabil Hamdi**
-- **Mohamed LACHGAR** (ResearchGate)
+- [**Salma Daigham**](https://github.com/salmasd5)
+- [**Imane Tahri**](https://github.com/imanetahri123)
+- [**Zakaria Zinaoui**](https://github.com/zakariaZinaOui)
+- [**Abdelghani Senhaji**](https://github.com/Senhaji22701)
+- [**Nabil Hamdi**](https://github.com/NABILHAMDI24)
+- [**Mohamed LACHGAR**](https://www.researchgate.net/profile/Mohamed-Lachgar) (ResearchGate)
 
 
 
