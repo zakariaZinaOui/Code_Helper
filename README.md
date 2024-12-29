@@ -56,8 +56,8 @@ La passerelle API simplifie et sécurise les interactions entre les utilisateurs
 
 
 ## Architecture du project
+![achitecture ACE](https://github.com/user-attachments/assets/53562ff9-9f06-4d73-8a6b-8441f161c806)
 
-![architecture Ace](https://github.com/user-attachments/assets/0a51c9f2-7c52-4dc9-8db5-32d00f414341)
 
 ### Backend
 
